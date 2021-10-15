@@ -10,17 +10,20 @@
     display: none;
     color: $lightBoxTextColor;
 
-    img {
+    .all {
         max-width: 90%;
         max-height: 80%;
+
+        @media only screen and (min-width: 768px) {
+        }
+    }
+
+    img {
         padding: 2px;
         border: 1px solid $lightBoxTextColor;
         margin-bottom: 10px;
-
-        @media only screen and (min-width: 768px) {
-            max-width: 80%;
-            max-height: 70%;
-        }
+        max-width: 90%;
+        max-height: 80%;
     }
 
     .userInfo {
