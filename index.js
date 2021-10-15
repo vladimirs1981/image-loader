@@ -152,17 +152,17 @@ function displayPhotosWithInfo() {
 
         userInfo.appendChild(avatar);
         userInfo.appendChild(username);
-        imageContainer.appendChild(all);
-        all.appendChild(userInfo);
-        all.appendChild(img);
-        all.appendChild(stats);
-        all.appendChild(photoLink);
-        all.appendChild(social);
         stats.appendChild(likes);
         stats.appendChild(downloads);
         social.appendChild(portfolioURL);
         social.appendChild(twitter);
         social.appendChild(instagram);
+        all.appendChild(userInfo);
+        all.appendChild(img);
+        all.appendChild(stats);
+        all.appendChild(photoLink);
+        all.appendChild(social);
+        imageContainer.appendChild(all);
     });
 }
 
