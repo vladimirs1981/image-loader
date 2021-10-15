@@ -33,7 +33,6 @@ function updatedCount(newCount) {
 
 function imageLoaded() {
     imagesLoaded++;
-    console.log(imagesLoaded);
     if (imagesLoaded === totalImages) {
         ready = true;
         loader.hidden = true;
@@ -61,7 +60,6 @@ function displayPhotosWithInfo() {
 
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log(totalImages);
     photosArray.forEach((photo) => {
         //create image
         const img = document.createElement('img');
@@ -103,7 +101,7 @@ function displayPhotosWithInfo() {
         //avatar image
         const avatar = document.createElement('img');
         avatar.classList.add('avatar');
-        setAttributes(avatar, { src: photo.user.profile_image.small });
+        setAttributes(avatar, { src: photo.user.profile_image.large });
 
         //username
         const username = document.createElement('small');
@@ -171,7 +169,6 @@ async function getPhotos() {
         const response = await fetch(apiUrl);
         photosArray = await response.json();
 
-        console.log(photosArray);
         displayPhotosWithInfo();
     } catch (error) {
         console.log(error);
