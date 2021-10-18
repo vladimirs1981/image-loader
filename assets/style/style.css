@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #d5d3ea;
+}
+
+main {
+  background-color: #d5d3ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  z-index: 50;
+  padding-top: 0.25rem;
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  margin: 10px 24px 20px 24px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 375px;
+  width: 100%;
+}
+header h1 {
+  color: #f9b15e;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-size: 26px;
+  text-align: center;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  header h1 {
+    font-size: 60px;
+  }
+}
+header button {
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background-color: #190f03;
+  color: #f9b15e;
+  border-radius: 10px;
+  border: none;
+}
+@media only screen and (min-width: 768px) {
+  header button {
+    width: 70px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  header button {
+    width: 90px;
+    font-size: 35px;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.loader img {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container {
+  padding: 20px;
+  padding-top: 0.25rem;
+  min-width: 375px;
+  margin: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #190f03;
+}
+.image-container .all {
+  padding: 5px;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.image-container img {
+  width: 100%;
+  height: 90%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.image-container a {
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #190f03;
+}
+@media only screen and (min-width: 768px) {
+  .image-container a {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .image-container a {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+.image-container .userInfo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.image-container .userInfo small {
+  align-self: flex-end;
+  font-size: 15px;
+  color: #755e45;
+}
+@media only screen and (min-width: 768px) {
+  .image-container .userInfo small {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .image-container .userInfo small {
+    font-size: 40px;
+  }
+}
+.image-container .avatar {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-bottom: 3px;
+  padding: 5px;
+}
+.image-container .stats {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .image-container .stats small {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .image-container .stats small {
+    font-size: 25px;
+  }
+}
+.image-container .likes {
+  margin-right: 15px;
+}
+.image-container .social {
+  font-size: 13px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  .image-container .social small {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .image-container .social small {
+    font-size: 30px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  grid-gap: 15px;
+  width: 100%;
+  margin: 0;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 170px);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(5, 200px);
+  }
+}
+.grid .all {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid .userInfo,
+.grid .likes,
+.grid .social,
+.grid .stats,
+.grid a {
+  display: none;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  color: #f9a94d;
+}
+#lightbox .all {
+  max-width: 90%;
+  max-height: 80%;
+}
+@media only screen and (min-width: 768px) {
+  #lightbox .all {
+    max-width: 60%;
+    max-height: 50%;
+  }
+}
+#lightbox img {
+  padding: 2px;
+  border: 1px solid #f9a94d;
+  margin-bottom: 10px;
+  max-width: 90%;
+  max-height: 80%;
+}
+#lightbox .userInfo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 7px;
+}
+#lightbox .userInfo small {
+  margin-bottom: 7px;
+  align-self: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  #lightbox .userInfo small {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #lightbox .userInfo small {
+    font-size: 35px;
+  }
+}
+#lightbox .userInfo img {
+  outline: none;
+  border: none;
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+#lightbox .stats {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 7px;
+}
+@media only screen and (min-width: 768px) {
+  #lightbox .stats small {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #lightbox .stats small {
+    font-size: 25px;
+  }
+}
+#lightbox .stats .likes {
+  margin-right: 15px;
+}
+#lightbox a {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #f9a94d;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  #lightbox a {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #lightbox a {
+    font-size: 30px;
+  }
+}
+#lightbox .social {
+  margin-top: 7px;
+  font-size: 15px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  #lightbox .social small {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #lightbox .social small {
+    font-size: 30px;
+  }
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */

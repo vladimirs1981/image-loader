@@ -1,0 +1,158 @@
+@use '_variables' as *;
+
+.image-container {
+    padding: 20px;
+    padding-top: 4px;
+    min-width: 375px;
+    margin: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $buttonColor;
+
+    .all {
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: $shadowColor 0px 3px 8px;
+    }
+
+    img {
+        width: 100%;
+        height: 90%;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+
+    a {
+        cursor: pointer;
+        font-size: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        color: $buttonColor;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media only screen and (min-width: 1280px) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .userInfo {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 3px;
+
+        small {
+            align-self: flex-end;
+            font-size: 15px;
+            color: $usernameColor;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 30px;
+            }
+
+            @media only screen and (min-width: 768px) {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .avatar {
+        width: 15%;
+        height: 15%;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-bottom: 3px;
+        padding: 5px;
+    }
+
+    .stats {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-right: 15px;
+
+        small {
+            @media only screen and (min-width: 768px) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            @media only screen and (min-width: 1280px) {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .likes {
+        margin-right: 15px;
+    }
+
+    .social {
+        font-size: 13px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: flex-start;
+
+        small {
+            @media only screen and (min-width: 768px) {
+                font-size: 20px;
+                padding-bottom: 5px;
+            }
+
+            @media only screen and (min-width: 1280px) {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-gap: 15px;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+
+    @media only screen and (min-width: 768px) {
+        grid-template-columns: repeat(4, 170px);
+    }
+
+    @media only screen and (min-width: 1280px) {
+        grid-template-columns: repeat(5, 200px);
+    }
+
+    .all {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .userInfo,
+    .likes,
+    .social,
+    .stats,
+    a {
+        display: none;
+    }
+}
